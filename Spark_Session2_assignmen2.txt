@@ -1,0 +1,47 @@
+1. How are worker, executor and task related to each other?
+Workers (aka slave nodes) are running Spark instances where executors live to execute tasks
+
+2. What are the key features of Spark?
+
+ Speed: Spark helps to run an application in Hadoop cluster, up to 100 times faster in memory, and 10 times faster when running on disk. 
+ As it follows the concept of RDD (Resilient Distributed Dataset) which allows it to store data transparently in memory, 
+ which helps in reducing read & write to disc one of the main time-consuming factor.
+ 
+ Usability: Ability to support multiple languages makes it dynamic. It allows you quickly write application in Java, Scala, Python and R.
+ Spark comes up with 80 high-level operators for interactive querying.
+ 
+ In Memory Computing: Keeping data in servers' RAM as it makes accessing stored data quickly. 
+ In memory, analytics accelerates iterative machine learning algorithms as it saves data read and write round trip from/to disk.
+ 
+ Pillar to Sophisticated Analytics: Spark comes with tools for interactive / declarative queries, streaming data, machine learning which is 
+ addition to simple map and reduce, so that users can combine all this into single workflow.
+ 
+ Real Time Stream Processing: Spark streaming can handle real-time stream processing along with integration of other frameworks which concludes 
+ that spark's streaming ability is easy, fault tolerance and Integrated.
+ 
+ Compatibility with Hadoop & existing Hadoop Data: Spark is compatible with both versions of Hadoop ecosystem. 
+ Be it YARN (Yet Another Resource Negotiator) or SIMR (Spark in MapReduce). It can read anything existing Hadoop data that’s what makes it suitable 
+ for migration of pure Hadoop-MapReduce applications. It can run independently too.
+ 
+ Lazy Evaluation: Another outstanding feature of Spark which is call by need or memorization. It waits for instructions before providing final result 
+ which saves significant time.
+ 
+ Active, progressive and expanding community: Built by wide set of developers from over 100 companies. It has active mailing state and JIRA for issue tracking. 
+ It is most active component in Apache repository.
+
+3. What is Spark Driver?
+The spark driver is the program that declares the transformations and actions on RDDs of data and submits such requests to the master. 
+In practical terms, the driver is the program that creates the SparkContext, connecting to a given Spark Master
+
+4. What are the benefits of Spark over MapReduce?
+ 1.Spark is easy to program and don't require that much hand coding whereas MapReduce is not that easy in terms of programming and requires lots of hand coding
+ 2.It has interactive mode whereas in map reduce there is no built-in interactive mode, MapReduce is developed for batch processing.
+ 3.For data processing spark can use streaming, machine learning, and batch processing whereas Hadoop MapReduce can use the batch engine. 
+ Spark is general purpose cluster computation engine.
+ 4.spark executes batch processing jobs about 10 to 100 times faster than Hadoop MapReduce.
+ 5.spark uses an abstraction called RDD which makes Spark feature rich, whereas map reduce doesn't have any abstraction
+ 6.spark uses lower latency by caching partial/complete results across distributed nodes whereas MapReduce is completely disk-based.
+
+5. What is Spark Executor?
+EXECUTORS. Executors are worker nodes' processes in charge of running individual tasks in a given Spark job. 
+They are launched at the beginning of a Spark application and typically run for the entire lifetime of an application.
